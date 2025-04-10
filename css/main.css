@@ -143,7 +143,7 @@ h2{
 
 #dragtarget1{
     font-size: 120px;
-    position:relative;
+    position: relative;
     top: 10%;
     left: 50px;
     height: 125px;
@@ -339,20 +339,20 @@ mark {
 
 }
 
-a:link {
+a: link {
     color: #a0a09a;
   }
   
-  a:hover {
+  a: hover {
     color: #1E1E1E;
   }
 
 
-a:visited{
+a: visited{
     color: #1E1E1E;
 }  
 
-  a:link {
+  a: link {
     text-decoration: none;
   }
 
