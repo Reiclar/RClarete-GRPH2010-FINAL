@@ -129,7 +129,8 @@ setTimeout(function() {
 
 $(".backbutton").fadeIn(fast);
 
-  $( function() {
+
+ $( function() {
     $( "#dragtarget1" ).draggable();
     $( ".droptarget1" ).droppable({
       drop: function( event, ui ) {
