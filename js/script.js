@@ -4,10 +4,10 @@ console.log("Connected!")
 
 setTimeout(function() {
     $('.title-card').fadeOut('slow');
-}, 21150); // ms
+}, 10000); // ms
 
 
-var timeleft = 20;
+var timeleft = 10;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
@@ -121,7 +121,13 @@ function dragStart(event) {
 
 setTimeout(function() {
   $('.container').fadeOut('fast');
-}, 31900); // ms
+}, 34900); // ms
+
+setTimeout(function() {
+  $('.backbutton').fadeIn('fast');
+}, 34900); // ms
+
+$(".backbutton").fadeIn(fast);
 
   $( function() {
     $( "#dragtarget1" ).draggable();
@@ -161,4 +167,18 @@ setTimeout(function() {
       }
     });
   } );
+
+
+  $( function() {
+    $( "#dragtarget4" ).draggable();
+    $( ".droptarget4" ).droppable({
+      drop: function( event, ui ) {
+        console.log("dropped!!")
+        $("<div><h3><b>Dr. Shima Rezaei Rashnoodi</b></h3> <br> <h4>Lecture: Being There: A Virtual Reality <br> Museum of Migrant Women <br><mark> 9:00am EST, Virtual (Teams) </mark> </h4><br> Shima Rezaei Rashnoodi is a senior researcher and lecturer at Breda University of Applied Sciences in the Netherlands, specializing in immersive media particularly spatial experiences in Virtual Reality (VR) and empathy. With a background in architecture and par-<br>ticipatory research, she has worked on projects around home in displacement and inclusive design. <br><br> This presentation introduces Being There, a virtual reality museum that highlights the stories of migrant women from Latin America, created through a COIL project. Students from BUas (The Nether-<br>lands) and UDEM (Mexico) worked together in a multidisciplinary effort to design an immersive VR experience, partnering with the Lamentos Escuchados Migration Center in Monterrey, Mexico. The project brings to life the personal journeys of migrant women as they travel through Mexico toward the United States, focusing on their challenges, aspirations, and their concept of “home.” By digitally portraying a mother and child, the VR museum aims to foster empathy and raise awareness about the realities migrant women face. The presentation will explore the international collaboration, creative process, challenges encountered, and the project’s broader goal of building understanding and empathy for migrant women.</div>")
+        .addClass("popup-div4")
+        .appendTo(this);
+      }
+    });
+  } );
+
 
