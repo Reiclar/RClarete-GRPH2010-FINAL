@@ -89,16 +89,62 @@ h2{
   }
 
 .under{
-    height: 770px;
+    height: 870px;
     width: 100%;
     background-color: #e5e5de;
-    position:fixed;
+    position:absolute;
+}
+
+.container{
+    height: 40px;
+    width: 90%;
+    border-radius: 50px;
+    background-color: #c0c0b7;;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    top: 40px;
+}
+
+.slide-in{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: #e5e5de;
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: 48.5%;
+    left: 75%;
+    animation: slide 5s ease 10 forwards;
+    z-index: 1
+}
+
+.stationary{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    border-color: #e5e5de;
+    border-style: dashed;
+    background-color: #c0c0b7;
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: -10px;
+    left: 98.3%;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(-15px) translateX(-3250%);
+    }
+    100%{
+        transform: translateY(-15px) translateX(975%);
+    }
 }
 
 #dragtarget1{
     font-size: 120px;
     position:relative;
-    top: 50px;
+    top: 10%;
     left: 50px;
     height: 125px;
     width: 355px;
@@ -112,7 +158,7 @@ h2{
     height: 125px;
     width: 355px;
     position:relative;
-    top: -100px;
+    top: -10%;
     left: 71.5%;
     background: url(../images/Jan28.png);
     background-size: cover;
@@ -167,52 +213,30 @@ h2{
     background-position-x: 0px;
 }
 
-
-.container{
-    height: 40px;
-    width: 150px;
-    border-radius: 50px;
-    background-color: #c0c0b7;;
-    transform: translate(-50%, -50%);
-    position: relative;
-    left: 50%;
-    top: -30px;
+#dragtarget4{
+    font-size: 120px;
+    position:relative;
+    top: 55px;
+    left: 50px;
+    height: 125px;
+    width: 400px;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
 }
 
-.slide-in{
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    background-color: #e5e5de;
-    transform: translate(-50%, -50%);
-    position: relative;
-    top: 50%;
-    left: 75%;
-    animation: slide 2s ease 20 forwards;
-    z-index: 1
+.droptarget4{
+    height: 105px;
+    width: 390px;
+    position:relative;
+    top: -100px;
+    left: 69%;
+    background: url(../images/Mar26.png);
+    background-size: cover;
+    background-position-x: 0px;
 }
 
-.stationary{
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    border-color: #e5e5de;
-    border-style: dashed;
-    background-color: #c0c0b7;
-    transform: translate(-50%, -50%);
-    position: relative;
-    top: -25%;
-    left: 85%;
-}
-
-@keyframes slide {
-    0%{
-        transform: translateY(-15px) translateX(-110px);
-    }
-    100%{
-        transform: translateY(-15px);
-    }
-}
 
 .popup-div{
     height: 240px;
@@ -255,7 +279,22 @@ h2{
     justify-content: flex-start;
     position: relative;
     left: -246%;
-    top: -40px;
+    top: -30px;
+    font-size: 15px;
+
+}
+
+.popup-div4{
+    height: 340px;
+    width: 900px;
+    background-color: #e5e5de;
+    border-radius: 20px;
+    padding: 20px;
+    column-count: 2;
+    justify-content: flex-start;
+    position: relative;
+    left: -246%;
+    top: -60px;
     font-size: 15px;
 
 }
@@ -280,3 +319,78 @@ mark {
     background-color: rgb(249, 249, 237);
   }
 
+
+.block{
+    background-color: #e5e5de;
+    height: 100px;
+    width: 100%;
+}
+
+.links{
+    column-count: 4;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Newsreader", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; 
+
+}
+
+a:link {
+    color: #a0a09a;
+  }
+  
+  a:hover {
+    color: #1E1E1E;
+  }
+
+
+a:visited{
+    color: #1E1E1E;
+}  
+
+  a:link {
+    text-decoration: none;
+  }
+
+.block2{
+    background-color: #e5e5de;
+    height: 50px;
+    width: 100%;
+}
+
+.backbutton{
+    font-family: "Newsreader", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; 
+    color: #a0a09a;
+    position: relative;
+    top: 3%;
+    left: 3%;
+}
+
+.skipbutton{
+    font-family: "Newsreader", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; 
+    color: #a0a09a;
+    position: relative;
+    top: 6.5%;
+    left: 4%;
+}
+
+#down{
+    font-family: "Newsreader", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px; 
+    color: #a0a09a;
+    position: fixed;
+    top: 93%;
+    left: 97%;
+}
